@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="../images/proto.jpg" alt="Profile Picture" class="profile-pic">
+            <h1 id="user-name">Kwame Frimpong Afriyie-Buabeng</h1>
+            <p class="bio">Web Developer | Tech Enthusiast | Culer</p>
+        </div>
+
+        <section class="about dropdown">
+            <h2 class="dropdown-header">About Me</h2>
+            <div class="dropdown-content hidden">
+                <p>Professional Summary: A brief overview of who you are, your career interests, and what motivates you.</p>
+                <h3>Contact Information</h3>
+                <p>Email: kwame.afriyie@ashesi.edu.gh</p>
+                <p>Phone: (233) 57 460 5826</p>
+            </div>
+        </section>
+
+        <section class="skills dropdown">
+            <h2 class="dropdown-header">Skills</h2>
+            <div class="dropdown-content hidden">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>HTML/CSS</li>
+                    <li>R</li>
+                    <li>Node.js</li>
+                </ul>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="projects dropdown">
+            <h2 class="dropdown-header">Projects</h2>
+            <div class="dropdown-content hidden">
+                <ul>
+                    <li><strong>ListaVista:</strong> A collaborative to-do list web app that allows multiple users to access and edit tasks in real-time, Collaborator, AWS, HTML, JS</li>
+                    <li><strong>Doggo:</strong> A pet shop platform where users can advertise, buy, and sell dogs, along with dog-related products.</li>
+                    <li><strong>Robloxx:</strong> A Tic-Tac-Toe game where users play against an undefeated AI, powered by the minimax algorithm and other strategies.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="experience dropdown">
+            <h2 class="dropdown-header">Experience</h2>
+            <div class="dropdown-content hidden">
+                <ul>
+                    <li><strong>Bones and Sons Ltd, full time</strong>
+                        <p>Making the money the ethical way🤫</p>
+                    </li>
+                    <li><strong>Expresspay, Internship</strong>
+                        <p>Made ethical money</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="education dropdown">
+            <h2 class="dropdown-header">Education and Certifications</h2>
+            <div class="dropdown-content hidden">
+                <ul>
+                    <li>Degree from Ashesi University</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="testimonials dropdown">
+            <h2 class="dropdown-header">Testimonials</h2>
+            <div class="dropdown-content hidden">
+                <blockquote>
+                    "Kwame is an exceptional developer and a great team player." - Frimpong
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="contact dropdown">
+            <h2 class="dropdown-header">Contact Me</h2>
+            <div class="dropdown-content hidden">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="../public/js/script.js"></script>
+</body>
+</html>
