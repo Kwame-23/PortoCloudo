@@ -16,10 +16,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Specify Node.js version if needed
+          node-version: '20' # Updated to Node 20 to avoid deprecation warnings
 
       - name: Build and deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./ # Adjust if your HTML files are in a subdirectory
+          branch: gh-pages # Specify the deployment branch
