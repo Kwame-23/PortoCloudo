@@ -1,11 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger deployment on pushes to main branch
+  # Trigger deployment only on pushes to main branch
   push:
-    branches: [ "main" ]
-  # Trigger deployment on pull requests to main branch
-  pull_request:
     branches: [ "main" ]
   # Allow manual triggering
   workflow_dispatch:
@@ -23,7 +20,10 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -37,14 +37,6 @@ jobs:
         with:
           path: '.'
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
